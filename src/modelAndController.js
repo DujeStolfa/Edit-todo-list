@@ -52,7 +52,6 @@ class Controller extends EventTarget {
 
         model.completed.push(completedObj);
         console.log(completedObj);
-
     }
 }
 

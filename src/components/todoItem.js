@@ -24,6 +24,7 @@ class TodoItem extends Component {
 
         let completedButton = document.createElement("button");
         completedButton.innerHTML = "!";
+        completedButton.id = "completed-button";
         completedButton.addEventListener(
             "click",
             () => this.complete()

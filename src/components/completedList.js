@@ -1,6 +1,6 @@
 import controller from "../modelAndController";
 import Component from "../baseComponent";
-import CompletedItem from "./comopletedItem";
+import CompletedItem from "./completedItem";
 
 
 class CompletedList extends Component {
@@ -23,7 +23,7 @@ class CompletedList extends Component {
             completed.desc
         );
 
-        this.addChild(todoItem.rootElement);
+        this.addChild(completedItem.rootElement);
     }
 }
 
