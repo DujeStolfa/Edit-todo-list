@@ -20,7 +20,7 @@ class TodoList extends Component {
         let todoItem = new TodoItem(
             todo.id,
             todo.title,
-            todo.desc,
+            todo.desc
         );
 
         this.addChild(todoItem.rootElement);

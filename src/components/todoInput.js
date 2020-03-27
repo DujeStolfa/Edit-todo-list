@@ -25,7 +25,7 @@ class TodoInput extends Component {
                 document.createElement("br"),
                 this.inputDesc,
                 document.createElement("br"),
-                this.submitBtn,
+                this.submitBtn
             ]
         );
     }
@@ -38,11 +38,11 @@ class TodoInput extends Component {
     }
 
     onSubmit() {
-            let inputData = this.getInputData();
-            controller.addTodo(
-                inputData.title,
-                inputData.desc,
-                );
+        let inputData = this.getInputData();
+        controller.addTodo(
+            inputData.title,
+            inputData.desc,
+        );
     }
 
 }

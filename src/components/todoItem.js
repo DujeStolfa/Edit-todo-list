@@ -19,8 +19,15 @@ class TodoItem extends Component {
         removeButton.id = "remove-button";
         removeButton.addEventListener(
             "click",
-            () => {this.removeSelf()}
-            );
+            () => { this.removeSelf() }
+        );
+
+        let completedButton = document.createElement("button");
+        completedButton.innerHTML = "!";
+        completedButton.addEventListener(
+            "click",
+            () => this.complete()
+        );
 
         let divider = document.createElement("hr");
 
@@ -29,7 +36,8 @@ class TodoItem extends Component {
                 titleElement,
                 descElement,
                 removeButton,
-                divider,
+                completedButton,
+                divider
             ]
         )
     }
@@ -38,6 +46,11 @@ class TodoItem extends Component {
         let parent = this.rootElement.parentNode;
         parent.removeChild(this.rootElement);
         controller.removeTodo(this.id);
+    }
+
+    complete() {
+        controller.addCompleted(this.id);
+        this.removeSelf();
     }
 }
 

@@ -1,5 +1,6 @@
 model = {
-    todos: []
+    todos: [],
+    completed: []
 };
 
 
@@ -35,6 +36,23 @@ class Controller extends EventTarget {
         );
 
         console.log(model);
+    }
+
+    addCompleted(id) {
+        let completedObj = model.todos.filter(
+            todo => todo.id == id
+        )[0];
+
+        this.dispatchEvent(
+            new CustomEvent(
+                "newCompleted",
+                {detail: {completed: completedObj}}
+                )
+        );
+
+        model.completed.push(completedObj);
+        console.log(completedObj);
+
     }
 }
 
