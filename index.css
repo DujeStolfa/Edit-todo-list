@@ -48,3 +48,14 @@ hr {
     font-weight: bold;
     font-size: 25px;
 }
+
+#completed-button {
+    background-color: #42f542;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
